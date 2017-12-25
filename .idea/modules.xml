@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TTUSchedule.iml" filepath="$PROJECT_DIR$/TTUSchedule.iml" />
       <module fileurl="file://$PROJECT_DIR$/WeekView/WeekView.iml" filepath="$PROJECT_DIR$/WeekView/WeekView.iml" />
+      <module fileurl="file://C:\Users\Fjodor Vershinin\AndroidStudioProjects\TTUSchedule\WeekView\WeekView.iml" filepath="C:\Users\Fjodor Vershinin\AndroidStudioProjects\TTUSchedule\WeekView\WeekView.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

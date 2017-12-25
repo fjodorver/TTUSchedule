@@ -15,8 +15,8 @@ android {
             storePassword '3553678'
         }
     }
-    compileSdkVersion 23
-    buildToolsVersion "23.0.2"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     packagingOptions {
         // prevent duplicate files
         exclude 'META-INF/LICENSE.txt'
@@ -29,9 +29,9 @@ android {
     defaultConfig {
         applicationId "ee.ttu.schedule"
         minSdkVersion 16
-        targetSdkVersion 23
-        versionCode 3
-        versionName "1.0.3"
+        targetSdkVersion 27
+        versionCode 4
+        versionName "1.0.4"
     }
     buildTypes {
         release {
@@ -44,13 +44,13 @@ android {
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:23.1.1'
-    compile 'com.android.support:design:23.1.1'
+    compile 'com.android.support:appcompat-v7:27.0.2'
+    compile 'com.android.support:design:27.0.2'
     compile('com.mikepenz:materialdrawer:4.5.4@aar') {
         transitive = true
     }
     compile 'com.mikepenz:google-material-typeface:2.2.0.1@aar'
-    compile 'com.google.code.gson:gson:2.5'
+    compile 'com.google.code.gson:gson:2.8.0'
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile project(':WeekView')
 }
