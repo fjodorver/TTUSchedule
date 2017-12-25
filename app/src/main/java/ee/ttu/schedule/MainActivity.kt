@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         drawer_layout.addDrawerListener(toggle)
         toggle.syncState()
         nav_view.setNavigationItemSelectedListener(this)
+        nextFragment(ScheduleFragment.newInstance(1))
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
