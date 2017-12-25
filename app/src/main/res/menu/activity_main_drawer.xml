@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_day"
+            android:icon="@drawable/ic_view_column"
+            android:title="@string/drawer_item_view_day" />
+        <item
+            android:id="@+id/nav_days"
+            android:icon="@drawable/ic_view_day"
+            android:title="@string/drawer_item_view_three_days" />
+        <item
+            android:id="@+id/nav_refresh"
+            android:icon="@drawable/ic_refresh"
+            android:title="@string/drawer_item_change_schedule" />
+    </group>
+
+    <item android:title="@string/drawer_item_section_preferences">
+        <menu>
+            <item
+                android:id="@+id/nav_info"
+                android:icon="@drawable/ic_info"
+                android:title="@string/drawer_item_about" />
+        </menu>
+    </item>
+</menu>

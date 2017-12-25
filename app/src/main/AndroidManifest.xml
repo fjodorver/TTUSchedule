@@ -24,7 +24,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <provider
             android:name="ee.ttu.schedule.provider.ScheduleProvider"
             android:authorities="ee.ttu.schedule"
@@ -61,7 +60,7 @@
             android:enabled="true"
             android:exported="false">
             <intent-filter>
-                <action android:name="ee.ttu.schedule.SYNC_FINISHED"/>
+                <action android:name="ee.ttu.schedule.SYNC_FINISHED" />
             </intent-filter>
         </receiver>
     </application>

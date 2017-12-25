@@ -1,6 +1,5 @@
 package ee.ttu.schedule.fragment;
 
-
 import android.app.Activity;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;

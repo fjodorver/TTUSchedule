@@ -1,16 +1,16 @@
 package ee.ttu.schedule.fragment;
 
-import android.app.Fragment;
-import android.app.LoaderManager;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.CursorLoader;
-import android.content.Loader;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.ActionMode;
 import android.view.LayoutInflater;
@@ -37,7 +37,10 @@ import ee.ttu.schedule.provider.BaseContract;
 import ee.ttu.schedule.provider.GroupContract;
 import ee.ttu.schedule.utils.SyncUtils;
 
-public class ChangeScheduleFragment extends Fragment implements LoaderManager.LoaderCallbacks<Cursor>, AbsListView.MultiChoiceModeListener, AdapterView.OnItemClickListener, SearchView.OnQueryTextListener, SyncStatusObserver, SwipeRefreshLayout.OnRefreshListener {
+public class ChangeScheduleFragment extends Fragment implements
+        LoaderManager.LoaderCallbacks<Cursor>, AbsListView.MultiChoiceModeListener,
+        AdapterView.OnItemClickListener,
+        SearchView.OnQueryTextListener, SyncStatusObserver, SwipeRefreshLayout.OnRefreshListener {
     public static final String TAG = "ChangeScheduleFragment";
 
     private ListView groupListView;
@@ -94,7 +97,7 @@ public class ChangeScheduleFragment extends Fragment implements LoaderManager.Lo
     @Override
     public void onPause() {
         super.onPause();
-        if(syncObserverHandle !=null){
+        if (syncObserverHandle != null) {
             ContentResolver.removeStatusChangeListener(syncObserverHandle);
             syncObserverHandle = null;
         }
@@ -108,6 +111,8 @@ public class ChangeScheduleFragment extends Fragment implements LoaderManager.Lo
         searchView.setIconifiedByDefault(false);
         searchView.setOnQueryTextListener(this);
     }
+
+
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -150,7 +155,7 @@ public class ChangeScheduleFragment extends Fragment implements LoaderManager.Lo
     @Override
     public boolean onActionItemClicked(ActionMode mode, MenuItem item) {
         swipeRefreshLayout.setRefreshing(true);
-        for(Map.Entry<Long, String> entry : groupMap.entrySet()){
+        for (Map.Entry<Long, String> entry : groupMap.entrySet()) {
             syncUtils.syncEvents(entry.getValue());
         }
         mode.finish();

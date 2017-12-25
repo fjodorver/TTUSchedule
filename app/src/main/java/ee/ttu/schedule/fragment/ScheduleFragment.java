@@ -1,12 +1,11 @@
 package ee.ttu.schedule.fragment;
 
-import android.app.Fragment;
-import android.app.LoaderManager;
+
+
+import android.app.AlertDialog;
 import android.content.ContentResolver;
 import android.content.Context;
-import android.content.CursorLoader;
 import android.content.DialogInterface;
-import android.content.Loader;
 import android.content.SyncStatusObserver;
 import android.database.Cursor;
 import android.graphics.Color;
@@ -17,8 +16,11 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.LoaderManager;
+import android.support.v4.content.CursorLoader;
+import android.support.v4.content.Loader;
 import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.app.AlertDialog;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.Menu;
